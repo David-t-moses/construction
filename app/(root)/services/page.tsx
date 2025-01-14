@@ -1,7 +1,15 @@
-import React from "react";
+import ServiceHero from "@/components/ServicesHero";
+import ServicesGrid from "@/components/ServicesGrid";
+import Process from "@/components/Process";
+import CallToAction from "@/components/CallToAction";
 
-const Services = () => {
-  return <div>Services</div>;
-};
-
-export default Services;
+export default function Services() {
+  return (
+    <main>
+      <ServiceHero />
+      <ServicesGrid />
+      <Process />
+      <CallToAction />
+    </main>
+  );
+}
