@@ -104,6 +104,7 @@ export default function Navbar() {
             <motion.div key={item.name} whileTap={{ scale: 0.95 }}>
               <Link
                 href={item.href}
+                onClick={() => setIsOpen(false)}
                 className="flex items-center space-x-4 p-3 rounded-lg hover:bg-primary/10 text-text hover:text-primary focus:text-primary focus:font-semibold  transition-all"
               >
                 <item.icon className="w-5 h-5" />

@@ -54,11 +54,11 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {["About Us", "Services", "Projects", "Blog", "Careers"].map(
+              {["Home", "About", "Services", "Projects", "Contact"].map(
                 (item) => (
                   <motion.li key={item} whileHover={{ x: 5 }}>
                     <Link
-                      href="#"
+                      href={`/${item.toLowerCase()}`}
                       className="text-text-light hover:text-primary flex items-center space-x-1"
                     >
                       <span>{item}</span>
