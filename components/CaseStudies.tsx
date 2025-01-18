@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const caseStudies = [
   {
     title: "Tech Hub Tower",
+    link: "/projects/tech-hub-tower",
     category: "Commercial",
     location: "Silicon Valley",
     year: "2023",
@@ -20,6 +22,7 @@ const caseStudies = [
   },
   {
     title: "Eco Residences",
+    link: "/projects/eco-residences",
     category: "Residential",
     location: "Coastal City",
     year: "2023",
@@ -35,7 +38,7 @@ const caseStudies = [
 
 export default function CaseStudies() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-slate-50" id="case-studies">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -92,11 +95,12 @@ export default function CaseStudies() {
                         </div>
                       ))}
                     </div>
-
-                    <button className="mt-6 inline-flex items-center gap-2 text-primary font-semibold group">
-                      View Case Study
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                    </button>
+                    <Link href={study.link}>
+                      <button className="mt-6 inline-flex items-center gap-2 text-primary font-semibold group">
+                        View Case Study
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
