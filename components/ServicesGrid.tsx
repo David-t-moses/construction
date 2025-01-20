@@ -14,53 +14,69 @@ import {
 
 const services = [
   {
-    icon: Building2,
-    title: "Commercial Construction",
+    icon: Wrench,
+    title: "High-Pressure Injection Grouting",
     description:
-      "Full-scale commercial building solutions with modern architectural designs.",
-    image: "/4.jpg",
-    features: ["Office Buildings", "Retail Spaces", "Hotels", "Restaurants"],
-  },
-  {
-    icon: HomeIcon,
-    title: "Residential Projects",
-    description:
-      "Custom home building and renovation services tailored to your lifestyle.",
-    image: "/5.jpg",
+      "Secure and stabilize your structures with our advanced injection grouting solutions. Designed to fill voids, seal cracks, and strengthen foundations, this service ensures durability and enhances structural integrity.",
+    image: "/1.jpg",
     features: [
-      "Custom Homes",
-      "Renovations",
-      "Extensions",
-      "Interior Remodeling",
+      "Crack Sealing",
+      "Foundation Strengthening",
+      "Void Filling",
+      "Structural Integrity",
     ],
   },
   {
-    icon: Wrench,
-    title: "Industrial Construction",
+    icon: Building2,
+    title: "Specialized Concrete Repairs and Re-strengthening",
     description:
-      "Specialized construction for manufacturing and industrial facilities.",
-    image: "/6.jpg",
+      "Restore and reinforce concrete structures with our expert repair solutions. From damage repair to load-bearing enhancements, we provide innovative techniques to bring long-lasting strength to your projects.",
+    image: "/4.jpg",
     features: [
-      "Factories",
-      "Warehouses",
-      "Processing Plants",
-      "Storage Facilities",
+      "Damage Repair",
+      "Structural Re-strengthening",
+      "Crack Sealing",
+      "Load-Bearing Enhancements",
+    ],
+  },
+  {
+    icon: HomeIcon,
+    title: "Waterproofing Works",
+    description:
+      "Protect your spaces from water damage with our comprehensive waterproofing services for roofs, basements, bathrooms, and external walls. We also provide heat insulation treatments for added comfort and efficiency.",
+    image: "/5.jpg",
+    features: [
+      "Roof Waterproofing",
+      "Basement Waterproofing",
+      "Bathroom Sealing",
+      "Heat Insulation Treatments",
+    ],
+  },
+  {
+    icon: Ruler,
+    title: "Expansion Joint Treatments",
+    description:
+      "Ensure flexibility and durability in your structures with our specialized expansion joint treatments. Prevent cracking, leaking, and movement issues with solutions tailored to withstand various pressures.",
+    image: "/2.jpg",
+    features: [
+      "Flexibility Solutions",
+      "Leak Prevention",
+      "Durability Enhancements",
+      "Custom Treatments",
     ],
   },
   {
     icon: PaintBucket,
-    title: "Interior Finishing",
-    description: "Premium interior design and finishing touches for any space.",
-    image: "/3.jpg",
-    features: ["Painting", "Flooring", "Cabinetry", "Custom Finishes"],
-  },
-  {
-    icon: Ruler,
-    title: "Architecture & Planning",
+    title: "Anti-Corrosion Coatings",
     description:
-      "Expert architectural design and construction planning services.",
-    image: "/2.jpg",
-    features: ["Design Services", "3D Modeling", "Project Planning", "Permits"],
+      "Guard your surfaces against rust and degradation with our high-performance anti-corrosion coatings. Ideal for industrial and residential applications, these treatments extend the life and appearance of your assets.",
+    image: "/3.jpg",
+    features: [
+      "Rust Protection",
+      "Long-Lasting Coatings",
+      "Surface Preservation",
+      "Industrial & Residential Solutions",
+    ],
   },
   {
     icon: Truck,
@@ -119,9 +135,9 @@ export default function ServicesGrid() {
                   ))}
                 </ul>
 
-                <button className="mt-4 px-6 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                {/* <button className="mt-4 px-6 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ))}

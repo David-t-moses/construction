@@ -18,8 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "ConstructCo - Premier Construction & Building Services",
-    template: "%s | ConstructCo",
+    default:
+      "Sudarshan Construction - Premier Construction & Building Services",
+    template: "%s | Sudarshan Construction",
   },
   description:
     "Leading construction company specializing in commercial, residential, and industrial projects. 25+ years of excellence in building and renovation services.",
@@ -35,9 +36,9 @@ export const metadata: Metadata = {
     "sustainable construction",
     "modern architecture",
   ],
-  authors: [{ name: "ConstructCo" }],
-  creator: "ConstructCo",
-  publisher: "ConstructCo",
+  authors: [{ name: "Sudarshan Construction" }],
+  creator: "Sudarshan Construction",
+  publisher: "Sudarshan Construction",
   formatDetection: {
     email: false,
     address: false,

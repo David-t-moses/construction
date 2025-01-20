@@ -26,7 +26,7 @@ export default function Footer() {
                 <span className="text-white font-bold">C</span>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                ConstructCo
+                Sudarshan Construction
               </span>
             </div>
             <p className="text-text-light">
@@ -77,15 +77,15 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               {[
-                "Commercial Construction",
-                "Residential Projects",
-                "Interior Design",
-                "Renovation",
-                "Construction Planning",
+                "High Pressure Injection Grouting",
+                "Specialized Concrete Re-Strengthening",
+                "Waterproofing works",
+                "Expansion Joint Treatments",
+                "Anti - Corrosion Coatings",
               ].map((item) => (
                 <motion.li key={item} whileHover={{ x: 5 }}>
                   <Link
-                    href="#"
+                    href="/services"
                     className="text-text-light hover:text-primary flex items-center space-x-1"
                   >
                     <span>{item}</span>
@@ -105,13 +105,15 @@ export default function Footer() {
               {[
                 {
                   icon: MapPin,
-                  text: "123 Construction Ave, Building City, BC 12345",
+                  text: "City Mall 1st floor office No. A112 Near Pendharkar College M.I.D.C. Dombivali (East) pin-421203 mumbai.",
                 },
-                { icon: Phone, text: "+1 (555) 123-4567" },
-                { icon: Mail, text: "info@constructco.com" },
+                { icon: Phone, text: "+91 (983) 397-6319" },
+                { icon: Mail, text: "info@Sudarshan Construction.com" },
               ].map((item, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <item.icon className="w-5 h-5 text-primary mt-1" />
+                <li key={index} className="flex items-start gap-3">
+                  <div className="flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
                   <span className="text-text-light">{item.text}</span>
                 </li>
               ))}
@@ -123,7 +125,8 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-primary/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-text-light text-sm">
-              © {new Date().getFullYear()} ConstructCo. All rights reserved.
+              © {new Date().getFullYear()} Sudarshan Construction. All rights
+              reserved.
             </p>
             <div className="flex space-x-6">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(

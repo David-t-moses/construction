@@ -28,10 +28,10 @@ export default function CompanyStory() {
               </span>
             </h2>
             <p className="text-slate-600">
-              Founded in 1998, ConstructCo has grown from a small local
-              contractor to one of the nation's leading construction firms. Our
-              commitment to quality, innovation, and client satisfaction has
-              been the cornerstone of our success.
+              Founded in 1998, Sudarshan Construction has grown from a small
+              local contractor to one of the nation's leading construction
+              firms. Our commitment to quality, innovation, and client
+              satisfaction has been the cornerstone of our success.
             </p>
             <p className="text-slate-600">
               We've built our reputation on delivering complex projects on time

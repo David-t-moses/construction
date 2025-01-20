@@ -71,13 +71,13 @@ export default function Navbar() {
             className="flex items-center space-x-2"
           >
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">C</span>
+              <span className="text-white font-bold">S</span>
             </div>
             <Link
               href="/"
               className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent"
             >
-              ConstructCo
+              Sudarshan Construction
             </Link>
           </motion.div>
 
@@ -136,8 +136,7 @@ export default function Navbar() {
           >
             <div className="container mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
-                <motion.div key={item.name} whileTap={{ scale: 0.95 }}
-                >
+                <motion.div key={item.name} whileTap={{ scale: 0.95 }}>
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
@@ -150,9 +149,7 @@ export default function Navbar() {
               ))}
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                onClick={
-                  handleRedirect
-                }
+                onClick={handleRedirect}
                 className="w-full mt-4 px-6 py-3 bg-primary text-white rounded-lg flex items-center justify-center space-x-2"
               >
                 Get Started

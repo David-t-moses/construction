@@ -27,30 +27,131 @@ const features = [
   },
 ];
 
-const testimonials = [
+const clients = [
   {
-    name: "Robert Chen",
-    position: "CEO, Tech Innovations",
-    image: "/cl-1.jpg",
-    quote:
-      "The attention to detail and commitment to excellence exceeded our expectations. A truly remarkable construction partner.",
-    rating: 5,
+    name: "Seven Hills Healthcare Limited",
+    location: "Marol Maroshi, Andheri (East)",
+    logo: "/company-logo.webp",
   },
   {
-    name: "Sarah Williams",
-    position: "Director, Urban Development",
-    image: "/cl-2.jpg",
-    quote:
-      "Their innovative approach and professional execution made our complex project a seamless experience.",
-    rating: 5,
+    name: "NIRLON Knowledge Park",
+    location: "Goregaon, Mumbai",
+    logo: "/company-logo.webp",
   },
   {
-    name: "Michael Torres",
-    position: "Property Developer",
-    image: "/cl-3.jpg",
-    quote:
-      "Outstanding quality and reliability. They've consistently delivered excellence across multiple projects.",
-    rating: 5,
+    name: "HCC (BWSL Project)",
+    location: "Bandra Worli Sea Link, Mumbai",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Evershine Builders Pvt. Ltd",
+    location: "Mumbai",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Reliance Rabale",
+    location: "Mumbai",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Sterlite Foundation",
+    location: "Marine Line",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Aker Kvaerner Power Gas",
+    location: "Kalyan Santacruz",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Nav Nilambari C.H.S",
+    location: "M.I.D.C Dombivali",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "HCC Marol Naka Metro",
+    location: "Kurla Andheri Road",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Adarsh Baug Hotel",
+    location: "Marine Line",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Gammon India LTD",
+    location: "Novotel Hotel Project, Andheri",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "IVRCL (CIDCO)",
+    location: "Vashi, Navi Mumbai",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Kanakia Pvt. Ltd",
+    location: "Marol Naka, Andheri",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Gurukripa Enterprises",
+    location: "Ghatkopar",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Larsen & Toubro Limited",
+    location: "Multiple Projects",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "J. Kumar Infrastructure Ltd",
+    location: "DMRC Projects",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "TPL Gulermak JV",
+    location: "Lucknow Metro Project",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Afcons Infrastructure Limited",
+    location: "Multiple Metro Projects",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Transtonnelstroy Afcons JV",
+    location: "Kolkata Metro Project",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "TOSHIBA JSW Power Systems",
+    location: "Harduaganj, Aligarh",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Larsen & Toubro Limited",
+    location: "MTHL Package - 1 Project, Mumbai",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Larsen & Toubro Limited",
+    location: "Bullet Train, Vadodara",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Larsen & Toubro Limited",
+    location: "Coastal Project, Mumbai Metro",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Afcons Infrastructure Ltd",
+    location: "Meerut Package - 08",
+    logo: "/company-logo.webp",
+  },
+  {
+    name: "Larsen & Toubro - STEC JV",
+    location: "Package - 01 & 07, Mumbai Metro",
+    logo: "/company-logo.webp",
   },
 ];
 
@@ -98,7 +199,7 @@ export default function WhyChooseUs() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
                 Why Choose{" "}
                 <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                  ConstructCo
+                  Sudarshan Construction
                 </span>
               </h2>
               <p className="mt-4 text-slate-600">
@@ -129,53 +230,46 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Testimonials Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
-            Client{" "}
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Testimonials
-            </span>
-          </h2>
-        </div>
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
+              Our Trusted{" "}
+              <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+                Clients
+              </span>
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-xl"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <Image
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  width={60}
-                  height={60}
-                  className="rounded-full"
-                />
-                <div>
-                  <h4 className="text-text-light font-semibold">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-slate-600">
-                    {testimonial.position}
-                  </p>
-                </div>
-              </div>
-              <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                  />
-                ))}
-              </div>
-              <p className="text-slate-600 italic">{testimonial.quote}</p>
-            </motion.div>
-          ))}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {[...clients, ...clients].map((client, index) => (
+                <motion.div
+                  key={`${client.name}-${index}`}
+                  className="flex-shrink-0 w-[300px] mx-4"
+                >
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="h-24 flex items-center justify-center mb-4">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        width={160}
+                        height={80}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <h4 className="font-semibold text-slate-800">
+                        {client.name}
+                      </h4>
+                      <p className="text-sm text-slate-600">
+                        {client.location}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

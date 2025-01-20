@@ -140,8 +140,8 @@ export async function sendEmail(formData: FormData) {
           </div>
           
           <div class="footer">
-            <p>This inquiry was received through the ConstructCo website contact form.</p>
-            <p>© ${new Date().getFullYear()} ConstructCo. All rights reserved.</p>
+            <p>This inquiry was received through the Sudarshan Construction website contact form.</p>
+            <p>© ${new Date().getFullYear()} Sudarshan Construction. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -306,8 +306,8 @@ export async function sendGetStartedRequest(formData: FormData) {
         </div>
 
         <div class="footer">
-          <p>This request was submitted through the ConstructCo website Get Started form.</p>
-          <p>© ${new Date().getFullYear()} ConstructCo. All rights reserved.</p>
+          <p>This request was submitted through the Sudarshan Construction website Get Started form.</p>
+          <p>© ${new Date().getFullYear()} Sudarshan Construction. All rights reserved.</p>
         </div>
       </div>
     </div>

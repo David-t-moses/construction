@@ -8,19 +8,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: "+1 (555) 123-4567",
+    details: "+91 (983) 397-6319",
     color: "from-blue-500 to-blue-600",
   },
   {
     icon: Mail,
     title: "Email",
-    details: "info@constructco.com",
+    details: "info@Sudarshan Construction.com",
     color: "from-green-500 to-green-600",
   },
   {
     icon: MapPin,
     title: "Office",
-    details: "123 Construction Ave, NY 10001",
+    details:
+      "City Mall 1st floor office No. A112 Near Pendharkar College M.I.D.C. Dombivali (East) pin-421203 mumbai.",
     color: "from-purple-500 to-purple-600",
   },
 ];
@@ -70,7 +71,7 @@ export default function ContactHero() {
               >
                 <div className="flex items-center gap-4">
                   <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center`}
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center flex-shrink-0`}
                   >
                     <info.icon className="w-6 h-6 text-white" />
                   </div>

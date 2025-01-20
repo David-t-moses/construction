@@ -9,7 +9,7 @@ export default function AboutHero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/w-1.jpg"
-          alt="About ConstructCo"
+          alt="About Sudarshan Construction"
           fill
           className="object-cover"
           priority

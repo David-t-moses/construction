@@ -13,7 +13,7 @@ const contactOptions = [
   {
     icon: Mail,
     title: "Email Us",
-    description: "contact@constructco.com",
+    description: "contact@Sudarshan Construction.com",
     color: "from-green-500 to-green-600",
   },
   {

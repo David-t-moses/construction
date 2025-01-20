@@ -5,75 +5,65 @@ import Image from "next/image";
 import { Building2, HomeIcon, Factory, PaintBucket } from "lucide-react";
 import { useState } from "react";
 
-const categories = [
+const projects = [
   {
-    icon: Building2,
-    title: "Commercial",
-    count: 45,
-    description: "Office buildings, retail spaces, and corporate headquarters",
-    projects: [
-      { name: "Tech Hub Tower", image: "/1.jpg", location: "Silicon Valley" },
-      { name: "Downtown Plaza", image: "/2.jpg", location: "New York" },
-      { name: "Business Center", image: "/3.jpg", location: "Chicago" },
-      { name: "Corporate Park", image: "/4.jpg", location: "Boston" },
-      { name: "Innovation Hub", image: "/5.jpg", location: "Seattle" },
-      { name: "Commerce Tower", image: "/6.jpg", location: "Miami" },
-    ],
+    name: "Delhi Metro Rail Corporation",
+    image: "/eco-exterior.jpg",
+    location: "New Delhi",
+    description:
+      "Line-3, Line-6, Airport Line: High Pressure PU, Epoxy, Micro Fine Cement Injection Grouting",
+    value: "₹600 Lakhs",
   },
   {
-    icon: HomeIcon,
-    title: "Residential",
-    count: 78,
-    description: "Luxury homes, apartments, and residential complexes",
-    projects: [
-      { name: "Luxury Villas", image: "/3.jpg", location: "Beverly Hills" },
-      { name: "Sky Apartments", image: "/2.jpg", location: "Manhattan" },
-      { name: "Garden Homes", image: "/1.jpg", location: "San Diego" },
-      { name: "Ocean View", image: "/4.jpg", location: "Miami Beach" },
-      {
-        name: "Mountain Lodge",
-        image: "/5.jpg",
-        location: "Denver",
-      },
-    ],
+    name: "HHC Metro Project",
+    image: "/eco-interior.jpg",
+    location: "New Delhi",
+    description:
+      "High Pressure PU Injection Grouting in Underground and Elevated Sections",
+    value: "₹100 Lakhs",
   },
   {
-    icon: Factory,
-    title: "Industrial",
-    count: 34,
-    description: "Manufacturing facilities and industrial warehouses",
-    projects: [
-      { name: "Tech Factory", image: "/6.jpg", location: "Detroit" },
-      { name: "Logistics Hub", image: "/5.jpg", location: "Houston" },
-      { name: "Manufacturing Plant", image: "/4.jpg", location: "Phoenix" },
-      { name: "Distribution Center", image: "/3.jpg", location: "Dallas" },
-    ],
+    name: "J KUMAR CC24",
+    image: "/tech-hub-exterior.jpg",
+    location: "New Delhi",
+    description:
+      "High Pressure PU Injection Grouting in Underground Tunnel Section",
+    value: "₹300 Lakhs",
   },
   {
-    icon: PaintBucket,
-    title: "Interior",
-    count: 56,
-    description: "Modern interior designs and renovations",
-    projects: [
-      { name: "Modern Office", image: "/2.jpg", location: "San Francisco" },
-      { name: "Luxury Home", image: "/1.jpg", location: "Los Angeles" },
-      { name: "Restaurant Design", image: "/4.jpg", location: "Las Vegas" },
-      { name: "Hotel Lobby", image: "/5.jpg", location: "Orlando" },
-      { name: "Retail Space", image: "/6.jpg", location: "Portland" },
-    ],
+    name: "GULARMARK TPL Project",
+    image: "/tech-hub-interior.jpg",
+    location: "Lucknow",
+    description:
+      "High Pressure PU Injection Grouting in Metro Water Tank Station",
+    value: "₹500 Lakhs",
+  },
+  {
+    name: "L&T Lucknow Metro",
+    image: "/5.jpg",
+    location: "Lucknow",
+    description: "Injection Grouting and Epoxy Grouting for Metro Project",
+    value: "₹28 Lakhs",
+  },
+  {
+    name: "Panchsil Ocean Towers",
+    image: "/1.jpg",
+    location: "Kalbadevi, Mumbai",
+    description: "Soil Stabilization Work for Ocean Towers Construction",
+    value: "₹26 Lakhs",
   },
 ];
 
 const ITEMS_PER_PAGE = 6;
 
 export default function ProjectGrid() {
-  const [activeTab, setActiveTab] = useState(categories[0].title);
-  const [showAll, setShowAll] = useState(false);
+  // const [activeTab, setActiveTab] = useState(categories[0].title);
+  // const [showAll, setShowAll] = useState(false);
 
-  const activeCategory = categories.find((cat) => cat.title === activeTab);
-  const displayedProjects = showAll
-    ? activeCategory?.projects
-    : activeCategory?.projects.slice(0, ITEMS_PER_PAGE);
+  // const activeCategory = categories.find((cat) => cat.title === activeTab);
+  // const displayedProjects = showAll
+  //   ? activeCategory?.projects
+  //   : activeCategory?.projects.slice(0, ITEMS_PER_PAGE);
 
   return (
     <section className="py-20 bg-white">
@@ -85,40 +75,16 @@ export default function ProjectGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
-            Explore Our{" "}
+            Our{" "}
             <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Project Categories
+              Notable Projects
             </span>
           </h2>
         </motion.div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <motion.button
-              key={category.title}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                setActiveTab(category.title);
-                setShowAll(false);
-              }}
-              className={`px-6 py-3 rounded-lg flex items-center gap-2 transition-colors
-                ${
-                  activeTab === category.title
-                    ? "bg-primary text-white"
-                    : "bg-slate-100 hover:bg-slate-200 text-slate-600"
-                }`}
-            >
-              <category.icon className="w-5 h-5" />
-              {category.title}
-            </motion.button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayedProjects?.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.name}
               initial={{ opacity: 0, y: 20 }}
@@ -127,36 +93,34 @@ export default function ProjectGrid() {
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="relative h-64 rounded-2xl overflow-hidden">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src={project.image}
                   alt={project.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {project.name}
                   </h3>
-                  <p className="text-white/80 text-sm">{project.location}</p>
+                  <p className="text-white/90 text-sm mb-3">
+                    {project.description}
+                  </p>
+                  <div className="flex justify-between items-center pt-4 border-t border-white/20">
+                    <span className="text-white/80 text-sm">
+                      {project.location}
+                    </span>
+                    <span className="text-white font-semibold">
+                      {project.value}
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Show More Button */}
-        {activeCategory?.projects.length > ITEMS_PER_PAGE && !showAll && (
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setShowAll(true)}
-            className="mt-12 mx-auto px-8 py-3 bg-primary text-white rounded-lg flex items-center gap-2"
-          >
-            Show More Projects
-          </motion.button>
-        )}
       </div>
     </section>
   );

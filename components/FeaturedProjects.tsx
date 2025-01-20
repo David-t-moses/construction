@@ -6,41 +6,62 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Modern Office Complex",
+    title: "Delhi Metro Rail Corporation",
+    category: "Infrastructure",
+    image: "/eco-exterior.jpg",
+    description:
+      "Line-3, Line-6, and Airport Line High Pressure PU, Epoxy, Micro Fine Cement Injection Grouting Tunnels and Metro Stations",
+    location: "New Delhi",
+    year: "2023",
+    stats: { value: "₹600 Lakhs", type: "Multiple Lines" },
+  },
+  {
+    title: "HHC Metro Project",
+    category: "Infrastructure",
+    image: "/eco-interior.jpg",
+    description:
+      "High Pressure PU Injection Grouting in Underground and Elevated Sections of Delhi Metro",
+    location: "New Delhi",
+    year: "2023",
+    stats: { value: "₹100 Lakhs", type: "Ongoing Project" },
+  },
+  {
+    title: "J KUMAR CC24",
+    category: "Infrastructure",
+    image: "/tech-hub-exterior.jpg",
+    description:
+      "High Pressure PU Injection Grouting in Underground Tunnel Section",
+    location: "New Delhi",
+    year: "2022",
+    stats: { value: "₹300 Lakhs", type: "Tunnel Work" },
+  },
+  {
+    title: "GULARMARK TPL Project",
+    category: "Infrastructure",
+    image: "/tech-hub-interior.jpg",
+    description:
+      "High Pressure PU Injection Grouting in Lucknow Metro Water Tank Station Repairing Tunnel",
+    location: "Lucknow",
+    year: "2023",
+    stats: { value: "₹500 Lakhs", type: "Station Repair" },
+  },
+  {
+    title: "L&T Lucknow Metro",
+    category: "Infrastructure",
+    image: "/4.jpg",
+    description: "Injection Grouting and Epoxy Grouting for Metro Project",
+    location: "Lucknow",
+    year: "2023",
+    stats: { value: "₹28 Lakhs", type: "Specialized Grouting" },
+  },
+  {
+    title: "Panchsil Ocean Towers",
     category: "Commercial",
     image: "/1.jpg",
-    description:
-      "25-story contemporary office building with sustainable features",
-    location: "Downtown Business District",
+    description: "Soil Stabilization Work for Ocean Towers Construction",
+    location: "Kalbadevi, Mumbai",
     year: "2023",
-    stats: { area: "45,000 sq ft", duration: "18 months" },
-  },
-  {
-    title: "Luxury Apartments",
-    category: "Residential",
-    image: "/2.jpg",
-    description: "High-end residential complex with premium amenities",
-    location: "Riverside Heights",
-    year: "2023",
-    stats: { units: "120 units", area: "80,000 sq ft" },
-  },
-  {
-    title: "Manufacturing Facility",
-    category: "Industrial",
-    image: "/3.jpg",
-    description: "State-of-the-art manufacturing plant with smart technology",
-    location: "Industrial Park",
-    year: "2022",
-    stats: { area: "100,000 sq ft", capacity: "500 workers" },
-  },
-  {
-    title: "Corporate Headquarters",
-    category: "Interior",
-    image: "/4.jpg",
-    description: "Modern interior design for tech company headquarters",
-    location: "Tech Hub",
-    year: "2023",
-    stats: { floors: "5 floors", workstations: "300+" },
+    stats: { value: "₹26 Lakhs", type: "Soil Stabilization" },
   },
 ];
 

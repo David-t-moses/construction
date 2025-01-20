@@ -15,36 +15,37 @@ import Link from "next/link";
 const services = [
   {
     icon: Building2,
-    title: "Commercial Construction",
+    title: "High Pressure Injection Grouting",
     description:
-      "Full-scale commercial building solutions with modern architectural designs.",
+      "Secure and stabilize your structures with our advanced injection grouting solutions. Designed to fill voids, seal cracks, and strengthen foundations, this service ensures durability and enhances structural integrity.",
     color: "from-blue-500 to-blue-600",
   },
   {
     icon: HomeIcon,
-    title: "Residential Projects",
+    title: "Specialized Concrete Repairs and Re-strengthening",
     description:
-      "Custom home building and renovation services tailored to your lifestyle.",
+      "Restore and reinforce concrete structures with our expert repair solutions. From damage repair to load-bearing enhancements, we provide innovative techniques to bring long-lasting strength to your projects.",
     color: "from-green-500 to-green-600",
   },
   {
     icon: Wrench,
-    title: "Industrial Construction",
+    title: "Waterproofing Works",
     description:
-      "Specialized construction for manufacturing and industrial facilities.",
+      "Protect your spaces from water damage with our comprehensive waterproofing services for roofs, basements, bathrooms, and external walls. We also provide heat insulation treatments for added comfort and efficiency.",
     color: "from-purple-500 to-purple-600",
   },
   {
     icon: PaintBucket,
-    title: "Interior Finishing",
-    description: "Premium interior design and finishing touches for any space.",
+    title: "Expansion Joint Treatments",
+    description:
+      "Ensure flexibility and durability in your structures with our specialized expansion joint treatments. Prevent cracking, leaking, and movement issues with solutions tailored to withstand various pressures.",
     color: "from-orange-500 to-orange-600",
   },
   {
     icon: Ruler,
-    title: "Architecture & Planning",
+    title: "Anti-Corrosion Coatings",
     description:
-      "Expert architectural design and construction planning services.",
+      "Guard your surfaces against rust and degradation with our high-performance anti-corrosion coatings. Ideal for industrial and residential applications, these treatments extend the life and appearance of your assets.",
     color: "from-red-500 to-red-600",
   },
   {
@@ -126,9 +127,7 @@ export default function ServicesSection() {
                       {service.description}
                     </p>
                     <Link
-                      href={`/services#${service.title
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
+                      href={"/services"}
                       className="inline-flex items-center text-primary text-sm font-medium mt-2"
                     >
                       Learn More →
