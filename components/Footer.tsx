@@ -62,7 +62,7 @@ export default function Footer() {
                       className="text-text-light hover:text-primary flex items-center space-x-1"
                     >
                       <span>{item}</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <ArrowUpRight className="w-4 h-4 flex-shrink-0" />
                     </Link>
                   </motion.li>
                 )

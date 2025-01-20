@@ -241,11 +241,11 @@ export default function WhyChooseUs() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
+            <div className="flex animate-scroll-team">
               {[...clients, ...clients].map((client, index) => (
                 <motion.div
                   key={`${client.name}-${index}`}
-                  className="flex-shrink-0 w-[300px] mx-4"
+                  className="flex-shrink-0 w-[300px] mx-3"
                 >
                   <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                     <div className="h-24 flex items-center justify-center mb-4">

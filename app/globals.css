@@ -29,6 +29,19 @@ body {
   }
 }
 
+@keyframes scroll-team {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 13));
+  }
+}
+
 .animate-scroll {
-  animation: scroll 5s linear infinite;
+  animation: scroll 1s linear infinite;
+}
+
+.animate-scroll-team {
+  animation: scroll-team 8s linear infinite;
 }
