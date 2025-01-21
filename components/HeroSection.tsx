@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 const highlights = [
-  "25+ Years Experience",
+  "14+ Years Experience",
   "Award-winning Projects",
   "Certified Experts",
 ];
@@ -57,22 +58,26 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-primary text-white rounded-lg flex items-center justify-center space-x-2 w-full sm:w-auto"
-              >
-                <span>Start Project</span>
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
+              <Link href="/get-started">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-primary text-white rounded-lg flex items-center justify-center space-x-2 w-full sm:w-auto"
+                >
+                  <span>Start Project</span>
+                  <ArrowRight className="w-4 h-4" />
+                </motion.button>
+              </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-primary/20 text-text rounded-lg hover:bg-primary/5 w-full sm:w-auto"
-              >
-                View Portfolio
-              </motion.button>
+              <Link href="/projects">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-primary/20 text-text rounded-lg hover:bg-primary/5 w-full sm:w-auto"
+                >
+                  View Portfolio
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
 

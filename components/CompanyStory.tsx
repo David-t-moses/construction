@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "500+", label: "Projects Completed" },
-  { value: "100%", label: "Client Satisfaction" },
-  { value: "250+", label: "Team Members" },
+  { value: "14+", label: "Years Experience" },
+  { value: "300+", label: "Projects Completed" },
+  { value: "99.9%", label: "Client Satisfaction" },
+  { value: "100+", label: "Team Members" },
 ];
 
 export default function CompanyStory() {
@@ -28,7 +28,7 @@ export default function CompanyStory() {
               </span>
             </h2>
             <p className="text-slate-600">
-              Founded in 1998, Sudarshan Construction has grown from a small
+              Founded in 2010, Sudarshan Construction has grown from a small
               local contractor to one of the nation's leading construction
               firms. Our commitment to quality, innovation, and client
               satisfaction has been the cornerstone of our success.

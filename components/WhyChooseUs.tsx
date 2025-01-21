@@ -179,11 +179,11 @@ export default function WhyChooseUs() {
             <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-xl">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-4xl font-bold text-primary">25+</h4>
+                  <h4 className="text-4xl font-bold text-primary">14+</h4>
                   <p className="text-slate-600">Years Experience</p>
                 </div>
                 <div>
-                  <h4 className="text-4xl font-bold text-primary">500+</h4>
+                  <h4 className="text-4xl font-bold text-primary">300+</h4>
                   <p className="text-slate-600">Projects Completed</p>
                 </div>
               </div>

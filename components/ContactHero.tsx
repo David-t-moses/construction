@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: "info@Sudarshan Construction.com",
+    details: "sudarshanconstruction9@gmail.com",
     color: "from-green-500 to-green-600",
   },
   {

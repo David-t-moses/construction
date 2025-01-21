@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Sudarshan Construction",
   },
   description:
-    "Leading construction company specializing in commercial, residential, and industrial projects. 25+ years of excellence in building and renovation services.",
+    "Leading construction company specializing in commercial, residential, and industrial projects. 14+ years of excellence in building and renovation services.",
   keywords: [
     "construction company",
     "building services",

@@ -108,7 +108,7 @@ export default function Footer() {
                   text: "City Mall 1st floor office No. A112 Near Pendharkar College M.I.D.C. Dombivali (East) pin-421203 mumbai.",
                 },
                 { icon: Phone, text: "+91 (983) 397-6319" },
-                { icon: Mail, text: "info@Sudarshan Construction.com" },
+                { icon: Mail, text: "sudarshanconstruction9@gmail.com" },
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="flex-shrink-0">

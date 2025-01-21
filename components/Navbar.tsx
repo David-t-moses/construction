@@ -18,6 +18,7 @@ const navItems = [
   { name: "Home", href: "/", icon: Home },
   { name: "Services", href: "/services", icon: Building2 },
   { name: "Projects", href: "/projects", icon: Briefcase },
+  { name: "Certificates", href: "/certificates", icon: Building2 },
   { name: "About", href: "/about", icon: Users },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
@@ -91,7 +92,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 rounded-lg text-text hover:bg-primary/10 hover:text-primary focus:text-primary focus:font-semibold transition-all"
+                  className="px-3 py-2 rounded-lg text-text hover:bg-primary/10 hover:text-primary focus:text-primary focus:font-semibold transition-all"
                 >
                   {item.name}
                 </Link>

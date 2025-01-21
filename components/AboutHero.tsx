@@ -31,7 +31,7 @@ export default function AboutHero() {
             </span>
           </h1>
           <p className="text-slate-300 text-lg md:text-xl">
-            25+ years of excellence in construction, delivering innovative
+            14+ years of excellence in construction, delivering innovative
             solutions and transforming skylines across the nation.
           </p>
         </motion.div>
