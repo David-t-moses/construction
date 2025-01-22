@@ -8,15 +8,15 @@ import { useState } from "react";
 const projects = [
   {
     name: "Delhi Metro Rail Corporation",
-    image: "/eco-exterior.jpg",
+    image: "/India-Delhi-Metro-Bhaven-Jani-Shutterstock-pic-cropped.webp",
     location: "New Delhi",
     description:
       "Line-3, Line-6, Airport Line: High Pressure PU, Epoxy, Micro Fine Cement Injection Grouting",
     value: "₹600 Lakhs",
   },
   {
-    name: "HHC Metro Project",
-    image: "/eco-interior.jpg",
+    name: "HCC Metro Project",
+    image: "/HCC_Metro_Project.webp",
     location: "New Delhi",
     description:
       "High Pressure PU Injection Grouting in Underground and Elevated Sections",
@@ -24,15 +24,16 @@ const projects = [
   },
   {
     name: "J KUMAR CC24",
-    image: "/tech-hub-exterior.jpg",
+    image: "/J_Kumar.webp",
     location: "New Delhi",
     description:
       "High Pressure PU Injection Grouting in Underground Tunnel Section",
     value: "₹300 Lakhs",
   },
   {
-    name: "GULARMARK TPL Project",
-    image: "/tech-hub-interior.jpg",
+    name: "GULERMARK TPL Project",
+    image:
+      "/gulermak-tpl-pune-metro-jv-deccan-gymkhana-pune-construction-companies-sqf2es6akn.webp",
     location: "Lucknow",
     description:
       "High Pressure PU Injection Grouting in Metro Water Tank Station",
@@ -40,17 +41,10 @@ const projects = [
   },
   {
     name: "L&T Lucknow Metro",
-    image: "/5.jpg",
+    image: "/Lucknow_Metro.webp",
     location: "Lucknow",
     description: "Injection Grouting and Epoxy Grouting for Metro Project",
     value: "₹28 Lakhs",
-  },
-  {
-    name: "Panchsil Ocean Towers",
-    image: "/1.jpg",
-    location: "Kalbadevi, Mumbai",
-    description: "Soil Stabilization Work for Ocean Towers Construction",
-    value: "₹26 Lakhs",
   },
 ];
 
@@ -66,7 +60,7 @@ export default function ProjectGrid() {
   //   : activeCategory?.projects.slice(0, ITEMS_PER_PAGE);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="projects">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +77,7 @@ export default function ProjectGrid() {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center mx-auto">
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -91,7 +85,7 @@ export default function ProjectGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer w-full max-w-[400px]"
             >
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
@@ -105,17 +99,17 @@ export default function ProjectGrid() {
                   <h3 className="text-xl font-bold text-white mb-2">
                     {project.name}
                   </h3>
-                  <p className="text-white/90 text-sm mb-3">
+                  {/* <p className="text-white/90 text-sm mb-3">
                     {project.description}
-                  </p>
-                  <div className="flex justify-between items-center pt-4 border-t border-white/20">
+                  </p> */}
+                  {/* <div className="flex justify-between items-center pt-4 border-t border-white/20">
                     <span className="text-white/80 text-sm">
                       {project.location}
                     </span>
                     <span className="text-white font-semibold">
                       {project.value}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>

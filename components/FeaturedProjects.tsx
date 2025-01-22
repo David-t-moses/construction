@@ -2,66 +2,42 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const projects = [
   {
-    title: "Delhi Metro Rail Corporation",
-    category: "Infrastructure",
-    image: "/eco-exterior.jpg",
-    description:
-      "Line-3, Line-6, and Airport Line High Pressure PU, Epoxy, Micro Fine Cement Injection Grouting Tunnels and Metro Stations",
+    name: "Delhi Metro Rail Corporation",
+    image: "/India-Delhi-Metro-Bhaven-Jani-Shutterstock-pic-cropped.webp",
     location: "New Delhi",
-    year: "2023",
-    stats: { value: "₹600 Lakhs", type: "Multiple Lines" },
+    description:
+      "Line-3, Line-6, Airport Line: High Pressure PU, Epoxy, Micro Fine Cement Injection Grouting",
+    value: "₹600 Lakhs",
   },
   {
-    title: "HHC Metro Project",
-    category: "Infrastructure",
-    image: "/eco-interior.jpg",
-    description:
-      "High Pressure PU Injection Grouting in Underground and Elevated Sections of Delhi Metro",
+    name: "HCC Metro Project",
+    image: "/HCC_Metro_Project.webp",
     location: "New Delhi",
-    year: "2023",
-    stats: { value: "₹100 Lakhs", type: "Ongoing Project" },
+    description:
+      "High Pressure PU Injection Grouting in Underground and Elevated Sections",
+    value: "₹100 Lakhs",
   },
   {
-    title: "J KUMAR CC24",
-    category: "Infrastructure",
-    image: "/tech-hub-exterior.jpg",
+    name: "J KUMAR CC24",
+    image: "/J_Kumar.webp",
+    location: "New Delhi",
     description:
       "High Pressure PU Injection Grouting in Underground Tunnel Section",
-    location: "New Delhi",
-    year: "2022",
-    stats: { value: "₹300 Lakhs", type: "Tunnel Work" },
+    value: "₹300 Lakhs",
   },
   {
-    title: "GULARMARK TPL Project",
-    category: "Infrastructure",
-    image: "/tech-hub-interior.jpg",
+    name: "GULERMARK TPL Project",
+    image:
+      "/gulermak-tpl-pune-metro-jv-deccan-gymkhana-pune-construction-companies-sqf2es6akn.webp",
+    location: "Lucknow",
     description:
-      "High Pressure PU Injection Grouting in Lucknow Metro Water Tank Station Repairing Tunnel",
-    location: "Lucknow",
-    year: "2023",
-    stats: { value: "₹500 Lakhs", type: "Station Repair" },
-  },
-  {
-    title: "L&T Lucknow Metro",
-    category: "Infrastructure",
-    image: "/4.jpg",
-    description: "Injection Grouting and Epoxy Grouting for Metro Project",
-    location: "Lucknow",
-    year: "2023",
-    stats: { value: "₹28 Lakhs", type: "Specialized Grouting" },
-  },
-  {
-    title: "Panchsil Ocean Towers",
-    category: "Commercial",
-    image: "/1.jpg",
-    description: "Soil Stabilization Work for Ocean Towers Construction",
-    location: "Kalbadevi, Mumbai",
-    year: "2023",
-    stats: { value: "₹26 Lakhs", type: "Soil Stabilization" },
+      "High Pressure PU Injection Grouting in Metro Water Tank Station",
+    value: "₹500 Lakhs",
   },
 ];
 
@@ -93,7 +69,7 @@ export default function FeaturedProjects() {
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -104,7 +80,7 @@ export default function FeaturedProjects() {
               <div className="relative h-[300px]">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -115,32 +91,34 @@ export default function FeaturedProjects() {
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="inline-block px-3 py-1 bg-primary/90 rounded-full text-sm mb-3">
+                    {/* <span className="inline-block px-3 py-1 bg-primary/90 rounded-full text-sm mb-3">
                       {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-white/90 text-sm">
+                    </span> */}
+                    <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                    {/* <p className="text-white/90 text-sm">
                       {project.description}
-                    </p>
+                    </p> */}
                   </div>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
-                  >
-                    →
-                  </motion.button>
+                  <Link href="/projects/#projects">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                    >
+                      →
+                    </motion.button>
+                  </Link>
                 </div>
 
                 {/* Project Stats */}
-                <div className="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-white/20">
+                {/* <div className="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-white/20">
                   {Object.entries(project.stats).map(([key, value]) => (
                     <div key={key}>
                       <p className="text-white/60 text-sm">{key}</p>
                       <p className="font-semibold">{value}</p>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

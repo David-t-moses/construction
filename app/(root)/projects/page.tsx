@@ -8,8 +8,8 @@ export default function ProjectsPage() {
     <main>
       <ProjectHero />
       <ProjectGrid />
-      <CaseStudies />
       <CallToAction />
+      {/* <CaseStudies /> */}
     </main>
   );
 }

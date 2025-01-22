@@ -9,23 +9,6 @@ import SuccessModal from "@/components/SuccessModal";
 const steps = [
   {
     id: 1,
-    title: "Project Type",
-    description: "Let's start with the basics",
-    fields: [
-      {
-        type: "radio",
-        name: "projectType",
-        options: [
-          { value: "residential", label: "Residential", icon: "🏠" },
-          { value: "commercial", label: "Commercial", icon: "🏢" },
-          { value: "industrial", label: "Industrial", icon: "🏭" },
-          { value: "renovation", label: "Renovation", icon: "🔨" },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
     title: "Project Details",
     description: "Tell us more about your project",
     fields: [
@@ -52,7 +35,7 @@ const steps = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Budget Range",
     description: "Help us understand your investment plans",
     fields: [
@@ -69,7 +52,7 @@ const steps = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: "Contact Information",
     description: "Let's get to know you",
     fields: [
@@ -93,6 +76,13 @@ const steps = [
         label: "Phone Number",
         placeholder: "(555) 123-4567",
         required: true,
+      },
+      {
+        type: "textarea",
+        name: "message",
+        label: "Additional Details",
+        placeholder: "Tell us more about your project requirements...",
+        required: false,
       },
     ],
   },
@@ -244,6 +234,20 @@ export default function GetStarted() {
                             </option>
                           ))}
                         </select>
+                      </div>
+                    ) : field.type === "textarea" ? (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          {field.label}
+                        </label>
+                        <textarea
+                          name={field.name}
+                          placeholder={field.placeholder}
+                          required={field.required}
+                          onChange={handleInputChange}
+                          rows={4}
+                          className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-text-light resize-none"
+                        />
                       </div>
                     ) : (
                       <div>

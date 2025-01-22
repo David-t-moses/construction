@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import ServiceModal from "./ServiceModal";
 import {
   ArrowRight,
   Building2,
@@ -18,7 +20,7 @@ const services = [
     title: "High-Pressure Injection Grouting",
     description:
       "Secure and stabilize your structures with our advanced injection grouting solutions. Designed to fill voids, seal cracks, and strengthen foundations, this service ensures durability and enhances structural integrity.",
-    image: "/1.jpg",
+    image: "/grouting.jpg",
     features: [
       "Crack Sealing",
       "Foundation Strengthening",
@@ -44,7 +46,7 @@ const services = [
     title: "Waterproofing Works",
     description:
       "Protect your spaces from water damage with our comprehensive waterproofing services for roofs, basements, bathrooms, and external walls. We also provide heat insulation treatments for added comfort and efficiency.",
-    image: "/5.jpg",
+    image: "/waterproofing.webp",
     features: [
       "Roof Waterproofing",
       "Basement Waterproofing",
@@ -57,7 +59,7 @@ const services = [
     title: "Expansion Joint Treatments",
     description:
       "Ensure flexibility and durability in your structures with our specialized expansion joint treatments. Prevent cracking, leaking, and movement issues with solutions tailored to withstand various pressures.",
-    image: "/2.jpg",
+    image: "/expansion-joint.webp",
     features: [
       "Flexibility Solutions",
       "Leak Prevention",
@@ -70,7 +72,7 @@ const services = [
     title: "Anti-Corrosion Coatings",
     description:
       "Guard your surfaces against rust and degradation with our high-performance anti-corrosion coatings. Ideal for industrial and residential applications, these treatments extend the life and appearance of your assets.",
-    image: "/3.jpg",
+    image: "/anti-corrosion.jpg",
     features: [
       "Rust Protection",
       "Long-Lasting Coatings",
@@ -82,7 +84,7 @@ const services = [
     icon: Truck,
     title: "Construction Management",
     description: "Comprehensive project management and construction oversight.",
-    image: "/1.jpg",
+    image: "/const-management.webp",
     features: [
       "Timeline Management",
       "Cost Control",
@@ -93,8 +95,9 @@ const services = [
 ];
 
 export default function ServicesGrid() {
+  const [selectedService, setSelectedService] = useState(null);
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-slate-50" id="services-grid">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
@@ -135,14 +138,22 @@ export default function ServicesGrid() {
                   ))}
                 </ul>
 
-                {/* <button className="mt-4 px-6 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                <button
+                  onClick={() => setSelectedService(service)}
+                  className="mt-4 px-6 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
+                >
                   Learn More
-                </button> */}
+                </button>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+      <ServiceModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        service={selectedService}
+      />
     </section>
   );
 }

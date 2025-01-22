@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useFormStatus } from "react-dom";
 import { sendEmail } from "@/lib/actions";
 import SuccessModal from "./SuccessModal";
-import { ChevronDown } from "lucide-react"; // Import the caret icon
 
 export default function ContactForm() {
   const [showModal, setShowModal] = useState(false);
@@ -95,7 +94,7 @@ export default function ContactForm() {
               className="w-full px-4 py-3 rounded-lg border border-slate-200 text-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors shadow-sm hover:border-slate-300 appearance-none"
             />
           </div>
-
+          {/* 
           <div>
             <label
               htmlFor="projectType"
@@ -112,13 +111,11 @@ export default function ContactForm() {
               >
                 <option value="">Select a project type</option>
                 <option value="commercial">Commercial</option>
-                <option value="residential">Residential</option>
                 <option value="industrial">Industrial</option>
-                <option value="interior">Interior</option>
               </select>
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 pointer-events-none" />
             </div>
-          </div>
+          </div> */}
 
           <div>
             <label

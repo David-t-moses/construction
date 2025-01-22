@@ -100,8 +100,8 @@ export default function HeroSection() {
             </div>
             <div className="relative h-32 md:h-auto">
               <Image
-                src="/hero-2.jpg"
-                alt="Interior Design"
+                src="/Lucknow_Metro.webp"
+                alt=""
                 fill
                 className="object-cover rounded-2xl shadow-xl"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"
@@ -109,8 +109,8 @@ export default function HeroSection() {
             </div>
             <div className="relative h-32 md:h-auto">
               <Image
-                src="/hero-3.jpg"
-                alt="Architecture"
+                src="/HCC_Metro_Project.webp"
+                alt=""
                 fill
                 className="object-cover rounded-2xl shadow-xl"
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 16vw"

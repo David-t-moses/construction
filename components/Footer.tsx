@@ -85,7 +85,7 @@ export default function Footer() {
               ].map((item) => (
                 <motion.li key={item} whileHover={{ x: 5 }}>
                   <Link
-                    href="/services"
+                    href="/services/#services-grid"
                     className="text-text-light hover:text-primary flex items-center space-x-1"
                   >
                     <span>{item}</span>
@@ -128,7 +128,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Sudarshan Construction. All rights
               reserved.
             </p>
-            <div className="flex space-x-6">
+            {/* <div className="flex space-x-6">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
                 (item) => (
                   <Link
@@ -140,7 +140,7 @@ export default function Footer() {
                   </Link>
                 )
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

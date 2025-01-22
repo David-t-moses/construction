@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const stats = [
   { value: "14+", label: "Years Experience" },
-  { value: "300+", label: "Projects Completed" },
+  { value: "50+", label: "Projects Completed" },
   { value: "99.9%", label: "Client Satisfaction" },
-  { value: "100+", label: "Team Members" },
+  // { value: "100+", label: "Team Members" },
 ];
 
 export default function CompanyStory() {
