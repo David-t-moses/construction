@@ -13,6 +13,7 @@ import {
   Users,
   Building2,
 } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "/", icon: Home },
@@ -66,21 +67,29 @@ export default function Navbar() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center h-16 relative">
           {/* Logo Section */}
+          <Link
+              href="/"
+              
+            >
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">S</span>
-            </div>
-            <Link
-              href="/"
-              className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent"
-            >
-              Sudarshan Construction
-            </Link>
+            <Image
+                src="/logo.webp"
+                alt="logo"
+                height={30}
+                width={30}
+                className="rounded-full"
+              />
+            
+            
+            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              <span className="text-black/60 font-bold">Sudarshan Construction</span>
+              </div>
           </motion.div>
+            </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 space-x-1">

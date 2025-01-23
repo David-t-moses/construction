@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Facebook,
   Twitter,
@@ -22,10 +23,16 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">C</span>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <Image
+                src="/logo.webp"
+                alt="logo"
+                height={30}
+                width={30}
+                className="rounded-full"
+              />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              <span className="text-xl text-black/60 font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
                 Sudarshan Construction
               </span>
             </div>
